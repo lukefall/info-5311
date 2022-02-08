@@ -9,5 +9,10 @@ app.wsgi_app = WhiteNoise(app.wsgi_app,
                           autorefresh=True)
 
 
+@app.route('/', methods=['GET'])
+def getHTML():
+    return render_template("index.html")
+
+
 if __name__ == "__main__":
     app.run(threaded=True, port=5000)
