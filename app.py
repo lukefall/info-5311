@@ -9,8 +9,8 @@ app.wsgi_app = WhiteNoise(app.wsgi_app,
                           autorefresh=True)
 
 
-@app.route('/', methods=['GET'])
-def getHTML():
+@app.route('/')
+def home():
     return render_template("index.html")
 
 
