@@ -1,6 +1,6 @@
 from flask import *
 from whitenoise import WhiteNoise
-app = Flask(__name__)
+app = Flask(__name__, template_folder="./")
 app.wsgi_app = WhiteNoise(app.wsgi_app,
                           root='static/',
                           prefix='static/',
